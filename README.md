@@ -9,4 +9,6 @@ Imp info:
 --- [Keys for npz](https://github.com/mir-group/nequip/blob/main/nequip/data/_keys.py)
                
 ----[More info on tutorial files](https://github.com/mir-group/nequip/blob/main/configs/full.yaml)
+
+--- [ Configs examples ](https://github.com/M3RG-IITD/MDBENCHGNN/tree/main/configs)
                

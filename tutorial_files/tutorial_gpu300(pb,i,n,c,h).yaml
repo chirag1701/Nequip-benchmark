@@ -1,6 +1,6 @@
 # general
 root: results/gpu_testing300K
-run_name: 
+run_name: 300K
 seed: 123456
 dataset_seed: 123456
 append: false

@@ -49,9 +49,6 @@ For questions about this research or repository, feel free to reach out:
 `chirag.sindhwani.cd.eee23@itbhu.ac.in`
 
 
-Contact
-For questions about this research or repository, please reach out via [your preferred contact method].
-
 
 
 

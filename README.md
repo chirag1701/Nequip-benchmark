@@ -36,7 +36,7 @@ This work explores how incorporating long-range Coulomb interactions through cha
 
 This repository complements the original `NequIP-charge` implementation by the [Ahmad Research Group](https://github.com/ahmad-research-group/nequip-charge).
 
-For details on the original NequIP methodology, refer to the paper:  
+For details on the original NequIP-LR methodology, refer to the paper:  
 📄 [NequIP with Charge Equilibration (arXiv:2503.17949)](https://arxiv.org/pdf/2503.17949)
 
 ---

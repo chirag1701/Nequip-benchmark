@@ -3,7 +3,17 @@
 This repository contains materials supporting my research on **NequIP-LR**, a long-range equivariant machine learning interatomic potential model.
 
 ---
+#  Getting Started
 
+To begin benchmarking and generate evaluation plots, follow these steps:
+```bash
+# Clone the repository
+git clone https://github.com/chirag1701/Nequip-benchmark.git
+cd Nequip-benchmark
+
+# Run the plot generation script
+python reports/generate_plots.py
+```
 ## 📂 Contents
 
 - 📊 **Reports**: Analysis documents comparing `NequIP`, `NequIP-LR`, and `NequIP-NoQeQ` models  

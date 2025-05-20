@@ -16,13 +16,13 @@ python generate_plots.py
 ```
 ## 📂 Contents
 
-- 📊 **Reports**: Analysis documents comparing `NequIP`, `NequIP-LR`, and `NequIP-NoQeQ` models  
-- 📁 **Datasets**: Benchmark files for **MAPI-1000K**, **3BPA**, and **GeTe** systems  
-- ⚙️ **Config Files**: Tutorial YAML files used during model training  
-- 🛠️ **Scripts**: Utilities for SSH connections and HPC job management  
-- 📈 **Visualization**: Scripts for generating benchmark plots used in the paper  
-- 🧾 **HPC Guide**: Basic documentation for running models on HPC environments  
-- 🖼️ **Presentation**: A survey paper [EGraff-bench](https://arxiv.org/abs/2310.02428)  i presented during my internship.
+-  **Reports**: Analysis documents comparing `NequIP`, `NequIP-LR`, and `NequIP-NoQeQ` models  
+-  **Datasets**: Benchmark files for **MAPI-1000K**, **3BPA**, and **GeTe** systems  
+-  **Config Files**: Tutorial YAML files used during model training  
+-  **Scripts**: Utilities for SSH connections and HPC job management  
+-  **Visualization**: Scripts for generating benchmark plots used in the paper  
+-  **HPC Guide**: Basic documentation for running models on HPC environments  
+-  **Presentation**: A survey paper [EGraff-bench](https://arxiv.org/abs/2310.02428)  i presented during my internship.
 
 ---
 
@@ -56,7 +56,7 @@ For details on the original NequIP-LR methodology, refer to the paper:
 
 ---
 
-## 📬 Contact
+##  Contact
 
 For questions about this research or repository, feel free to reach out:
 

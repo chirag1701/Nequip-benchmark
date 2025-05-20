@@ -12,7 +12,7 @@ git clone https://github.com/chirag1701/Nequip-benchmark.git
 cd Nequip-benchmark
 
 # Run the plot generation script
-python reports/generate_plots.py
+python generate_plots.py
 ```
 ## 📂 Contents
 

@@ -12,7 +12,7 @@ This repository contains materials supporting my research on **NequIP-LR**, a lo
 - 🛠️ **Scripts**: Utilities for SSH connections and HPC job management  
 - 📈 **Visualization**: Scripts for generating benchmark plots used in the paper  
 - 🧾 **HPC Guide**: Basic documentation for running models on HPC environments  
-- 🖼️ **Presentation**: A paper i presented during my internship [EGraff-bench](https://arxiv.org/abs/2310.02428)  
+- 🖼️ **Presentation**: A survey paper [EGraff-bench](https://arxiv.org/abs/2310.02428)  i presented during my internship.
 
 ---
 

@@ -34,8 +34,9 @@ This work explores how incorporating long-range Coulomb interactions through cha
 
 ## 🔗 Related Work
 
-This repository complements the original `NequIP-charge` implementation by the [Ahmad Research Group](https://github.com/ahmad-research-group/nequip-charge/tree/charge-encoding).
-NoQeQ branch can be found here : [NoQeQ Branch](https://github.com/ahmad-research-group/nequip-charge/tree/no-Qeq)
+This repository complements the original `NequIP-charge` implementation by the [Ahmad Research Group](https://github.com/ahmad-research-group/nequip-charge).
+[NoQeQ Branch](https://github.com/ahmad-research-group/nequip-charge/tree/no-Qeq)
+[Charge-encoding Branch](https://github.com/ahmad-research-group/nequip-charge/tree/charge-encoding)
 
 For details on the original NequIP-LR methodology, refer to the paper:  
 📄 [NequIP with Charge Equilibration (arXiv:2503.17949)](https://arxiv.org/pdf/2503.17949)

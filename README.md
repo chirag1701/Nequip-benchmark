@@ -1,6 +1,6 @@
 # NequIP Benchmark
 
-This repository contains materials supporting my research on **NequIP-LR**, a long-range equivariant machine learning interatomic potential model.
+This repository contains materials supporting my research on charge-aware long-range equivariant machine learning interatomic potentials
 
 ---
 #  Getting Started

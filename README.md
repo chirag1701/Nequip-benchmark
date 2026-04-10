@@ -1,57 +1,88 @@
-# NequIP Benchmark
+# NequIP Depth Allocation Benchmark
 
-This repository contains materials supporting my research on charge-aware long-range equivariant machine learning interatomic potentials (MLIPs)
+**Charge Modeling Is Not a Substitute for Geometric Depth in Equivariant Interatomic Potentials**
 
-```
-## 📂 Contents
-
--  **Reports**: Analysis documents comparing `NequIP`, `NequIP-LR`, and `NequIP-NoQeQ` models  
--  **Datasets**: Benchmark files for **MAPI-1000K**, **3BPA**, and **GeTe** systems  
--  **Config Files**: Tutorial YAML files used during model training  
--  **Scripts**: Utilities for SSH connections and HPC job management  
--  **Visualization**: Scripts for generating benchmark plots used in the paper  
--  **HPC Guide**: Basic documentation for running models on HPC environments  
--  **Presentation**: A survey paper [EGraff-bench](https://arxiv.org/abs/2310.02428)  i presented during my internship.
+📄 Paper: [PDF](./paper.pdf)
 
 ---
 
-##  Overview
+## Overview
 
-This work explores how incorporating long-range Coulomb interactions through charge distribution modeling affects the performance of equivariant interatomic potentials. The research evaluates three model variants:
+This repository contains the **analysis, configurations, and supporting material** for our study on depth allocation in charge-aware equivariant interatomic potentials (MLIPs).
 
-- **NequIP**: Standard equivariant message-passing model  
-- **NequIP-LR**: Long-range model with charge equilibration  
-- **NequIP-NoQeQ**: Long-range model with direct charge prediction  
+We investigate a core architectural question:
 
-###  Key Experiments Include:
-
-- Varying total number of model layers  
-- Modifying number of charge-encoding layers  
-- Tuning the interaction cutoff radius  
+> **Under a fixed model depth, how should capacity be distributed between geometric message passing and charge-based long-range modeling?**
 
 ---
 
-## 🔗 Related Work
+## Scope of This Repository
 
-This repository complements the original `NequIP-charge` implementation by the [Ahmad Research Group](https://github.com/ahmad-research-group/nequip-charge).
+This is **not a fully reproducible training framework**.
 
+Instead, the repository provides:
 
-[NoQeQ Branch](https://github.com/ahmad-research-group/nequip-charge/tree/no-Qeq)
+- Experiment configurations used in the study  
+- Benchmark datasets and setup details  
+- Analysis scripts and visualizations  
+- Supporting material for reported results  
 
-[Charge-encoding Branch](https://github.com/ahmad-research-group/nequip-charge/tree/charge-encoding)
-
-For details on the original NequIP-LR methodology, refer to the paper:  
-📄 [NequIP with Charge Equilibration (arXiv:2503.17949)](https://arxiv.org/pdf/2503.17949)
+The goal is to **document and communicate the experimental findings**, not to serve as a standalone training pipeline.
 
 ---
 
-##  Contact
+## What This Work Shows
 
-For questions about this research or repository, feel free to reach out:
+We perform controlled experiments where:
 
-📧 **Chirag Sindhwani**  
-`chirag.sindhwani.cd.eee23@itbhu.ac.in`
+- Total model depth is fixed  
+- Layers are redistributed between:
+  - geometric message passing  
+  - charge-prediction modules  
 
+This isolates the effect of **inductive bias**, independent of model size.
+
+---
+
+## Key Insight
+
+- Geometric layers → consistent performance gains  
+- Charge modeling → beneficial within a limited range  
+- Excess charge layers → degrade accuracy  
+
+> **Charge modeling introduces a complementary inductive bias, not a substitute for geometric depth.**
+
+---
+
+## Models Studied
+
+- **NequIP** — purely geometric baseline  
+- **NequIP-LR** — long-range model with charge equilibration (QEq)  
+- **NequIP-NoQeQ** — direct charge prediction without equilibration  
+
+---
+
+## Datasets
+
+- **3BPA** — molecular benchmark  
+- **GeTe** — periodic system with strong electrostatics  
+- **MAPI-1000K** — large-scale benchmark dataset  
+
+These datasets cover distinct regimes of charge behavior and bonding.
+
+---
+
+## Notes
+
+- Exact training pipelines depend on the upstream  
+  [NequIP-charge implementation](https://github.com/ahmad-research-group/nequip-charge)  
+- Some HPC-specific scripts and environments are not fully abstracted  
+
+---
+
+## Status
+
+📌 Research artifact — intended for understanding methodology and results, not plug-and-play reproduction.
 
 
 

@@ -1,9 +1,6 @@
 # NequIP Depth Allocation Benchmark
 
 **Charge Modeling Is Not a Substitute for Geometric Depth in Equivariant Interatomic Potentials**
-
-Paper: [PDF](./paper.pdf)
-
 ---
 
 ## Introduction
@@ -15,8 +12,7 @@ Equivariant interatomic potentials like NequIP combine two different ideas:
 
 Both improve performance, but they do very different things.  
 So the question is:
-
-> if total model depth is fixed, where should that capacity go?
+ if total model depth is fixed, where should that capacity go?
 
 ---
 

@@ -2,17 +2,6 @@
 
 This repository contains materials supporting my research on charge-aware long-range equivariant machine learning interatomic potentials (MLIPs)
 
----
-#  Getting Started
-
-To begin benchmarking and generate evaluation plots, follow these steps:
-```bash
-# Clone the repository
-git clone https://github.com/chirag1701/Nequip-benchmark.git
-cd Nequip-benchmark
-
-# Run the plot generation script
-python generate_plots.py
 ```
 ## 📂 Contents
 

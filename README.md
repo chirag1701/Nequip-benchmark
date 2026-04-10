@@ -2,88 +2,89 @@
 
 **Charge Modeling Is Not a Substitute for Geometric Depth in Equivariant Interatomic Potentials**
 
-📄 Paper: [PDF](./paper.pdf)
+Paper: [PDF](./paper.pdf)
 
 ---
 
-## Overview
+## Introduction
 
-This repository contains the **analysis, configurations, and supporting material** for our study on depth allocation in charge-aware equivariant interatomic potentials (MLIPs).
+Equivariant interatomic potentials like NequIP combine two different ideas:
 
-We investigate a core architectural question:
+- geometric message passing (local, symmetry-aware)
+- charge-based modeling (long-range electrostatics)
 
-> **Under a fixed model depth, how should capacity be distributed between geometric message passing and charge-based long-range modeling?**
+Both improve performance, but they do very different things.  
+So the question is:
 
----
-
-## Scope of This Repository
-
-This is **not a fully reproducible training framework**.
-
-Instead, the repository provides:
-
-- Experiment configurations used in the study  
-- Benchmark datasets and setup details  
-- Analysis scripts and visualizations  
-- Supporting material for reported results  
-
-The goal is to **document and communicate the experimental findings**, not to serve as a standalone training pipeline.
+> if total model depth is fixed, where should that capacity go?
 
 ---
 
-## What This Work Shows
+## What this repo is
 
-We perform controlled experiments where:
+This repo contains the experiments and analysis used to study that question.
 
-- Total model depth is fixed  
-- Layers are redistributed between:
-  - geometric message passing  
-  - charge-prediction modules  
+The main setup is simple:
 
-This isolates the effect of **inductive bias**, independent of model size.
+- keep total number of layers fixed  
+- vary how many are geometric vs charge layers  
 
----
-
-## Key Insight
-
-- Geometric layers → consistent performance gains  
-- Charge modeling → beneficial within a limited range  
-- Excess charge layers → degrade accuracy  
-
-> **Charge modeling introduces a complementary inductive bias, not a substitute for geometric depth.**
+This way, changes in performance come from *where depth is used*, not just increasing model size.
 
 ---
 
-## Models Studied
+## Main observations
 
-- **NequIP** — purely geometric baseline  
-- **NequIP-LR** — long-range model with charge equilibration (QEq)  
-- **NequIP-NoQeQ** — direct charge prediction without equilibration  
+- more geometric layers → consistently helps  
+- charge modeling → helps initially, then saturates  
+- too many charge layers → hurts performance  
+
+So charge modeling is useful, but it doesn’t replace geometric depth.
+
+Also, this depends on the dataset:
+- 3BPA benefits more from charge modeling  
+- GeTe is unstable with QEq  
+- MAPI works best with a mix  
+
+---
+
+## Models
+
+- NequIP (baseline)
+- NequIP-LR (with charge equilibration)
+- NequIP-NoQeQ (direct charge prediction)
 
 ---
 
 ## Datasets
 
-- **3BPA** — molecular benchmark  
-- **GeTe** — periodic system with strong electrostatics  
-- **MAPI-1000K** — large-scale benchmark dataset  
-
-These datasets cover distinct regimes of charge behavior and bonding.
+- 3BPA  
+- GeTe  
+- MAPI-1000K  
 
 ---
 
-## Notes
+## Built on
 
-- Exact training pipelines depend on the upstream  
-  [NequIP-charge implementation](https://github.com/ahmad-research-group/nequip-charge)  
-- Some HPC-specific scripts and environments are not fully abstracted  
+This work builds on the NequIP-charge implementations from AMERG:
+
+- https://github.com/ahmad-research-group/nequip-charge  
+- https://github.com/ahmad-research-group/nequip-charge/tree/charge-encoding  
+- https://github.com/ahmad-research-group/nequip-charge/tree/no-Qeq  
 
 ---
 
-## Status
+## Note
 
-📌 Research artifact — intended for understanding methodology and results, not plug-and-play reproduction.
+This is not a fully reproducible training repo.  
+Some parts depend on upstream code and HPC setup.
 
+---
 
+## Author
+
+Chirag Sindhwani  
+IIT (BHU), Varanasi  
+chirag.sindhwani.cd.eee23@itbhu.ac.in
 
 

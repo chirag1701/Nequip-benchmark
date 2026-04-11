@@ -14,7 +14,6 @@ Both improve performance, but they do very different things.
 So the question is:
  if total model depth is fixed, where should that capacity go?
 
----
 
 ## What this repo is
 
@@ -27,7 +26,6 @@ The main setup is simple:
 
 This way, changes in performance come from *where depth is used*, not just increasing model size.
 
----
 
 ## Main observations
 
@@ -42,7 +40,7 @@ Also, this depends on the dataset:
 - GeTe is unstable with QEq  
 - MAPI works best with a mix  
 
----
+
 
 ## Models
 
@@ -50,7 +48,7 @@ Also, this depends on the dataset:
 - NequIP-LR (with charge equilibration)
 - NequIP-NoQeQ (direct charge prediction)
 
----
+
 
 ## Datasets
 
@@ -58,7 +56,7 @@ Also, this depends on the dataset:
 - GeTe  
 - MAPI-1000K  
 
----
+
 
 ## Built on
 
@@ -68,14 +66,13 @@ This work builds on the NequIP-charge implementations from AMERG:
 - https://github.com/ahmad-research-group/nequip-charge/tree/charge-encoding  
 - https://github.com/ahmad-research-group/nequip-charge/tree/no-Qeq  
 
----
+
 
 ## Note
 
 This is not a fully reproducible training repo.  
 Some parts depend on upstream code and HPC setup.
 
----
 
 ## Author
 
